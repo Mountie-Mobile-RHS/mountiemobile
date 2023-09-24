@@ -42,11 +42,12 @@ dependencies:
   # Comparing Dart Objects
   equatable: ^2.0.5
 
-  # Service Locator
+  # DI
   get_it: ^7.6.4
 
   dartz: ^0.10.1
   freezed_annotation: ^2.4.1
+  auto_route: ^7.8.3
 
 dev_dependencies:
   flutter_test:

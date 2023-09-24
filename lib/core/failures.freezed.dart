@@ -20,38 +20,38 @@ mixin _$ValueFailure<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T failedValue) invalidEmail,
-    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) badPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T failedValue)? invalidEmail,
-    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? badPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? badPassword,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<T> value) invalidEmail,
-    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(BadPassword<T> value) badPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
-    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(BadPassword<T> value)? badPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(BadPassword<T> value)? badPassword,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -173,7 +173,7 @@ class _$InvalidEmail<T>
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T failedValue) invalidEmail,
-    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) badPassword,
   }) {
     return invalidEmail(failedValue);
   }
@@ -182,7 +182,7 @@ class _$InvalidEmail<T>
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T failedValue)? invalidEmail,
-    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? badPassword,
   }) {
     return invalidEmail?.call(failedValue);
   }
@@ -191,7 +191,7 @@ class _$InvalidEmail<T>
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? badPassword,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -204,7 +204,7 @@ class _$InvalidEmail<T>
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<T> value) invalidEmail,
-    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(BadPassword<T> value) badPassword,
   }) {
     return invalidEmail(this);
   }
@@ -213,7 +213,7 @@ class _$InvalidEmail<T>
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
-    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(BadPassword<T> value)? badPassword,
   }) {
     return invalidEmail?.call(this);
   }
@@ -222,7 +222,7 @@ class _$InvalidEmail<T>
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(BadPassword<T> value)? badPassword,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -245,22 +245,22 @@ abstract class InvalidEmail<T> implements ValueFailure<T> {
 }
 
 /// @nodoc
-abstract class _$$ShortPasswordCopyWith<T, $Res>
+abstract class _$$BadPasswordCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory _$$ShortPasswordCopyWith(
-          _$ShortPassword<T> value, $Res Function(_$ShortPassword<T>) then) =
-      __$$ShortPasswordCopyWithImpl<T, $Res>;
+  factory _$$BadPasswordCopyWith(
+          _$BadPassword<T> value, $Res Function(_$BadPassword<T>) then) =
+      __$$BadPasswordCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class __$$ShortPasswordCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res, _$ShortPassword<T>>
-    implements _$$ShortPasswordCopyWith<T, $Res> {
-  __$$ShortPasswordCopyWithImpl(
-      _$ShortPassword<T> _value, $Res Function(_$ShortPassword<T>) _then)
+class __$$BadPasswordCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$BadPassword<T>>
+    implements _$$BadPasswordCopyWith<T, $Res> {
+  __$$BadPasswordCopyWithImpl(
+      _$BadPassword<T> _value, $Res Function(_$BadPassword<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -268,7 +268,7 @@ class __$$ShortPasswordCopyWithImpl<T, $Res>
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(_$ShortPassword<T>(
+    return _then(_$BadPassword<T>(
       failedValue: freezed == failedValue
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
@@ -279,24 +279,22 @@ class __$$ShortPasswordCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$ShortPassword<T>
-    with DiagnosticableTreeMixin
-    implements ShortPassword<T> {
-  const _$ShortPassword({required this.failedValue});
+class _$BadPassword<T> with DiagnosticableTreeMixin implements BadPassword<T> {
+  const _$BadPassword({required this.failedValue});
 
   @override
   final T failedValue;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ValueFailure<$T>.shortPassword(failedValue: $failedValue)';
+    return 'ValueFailure<$T>.badPassword(failedValue: $failedValue)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.shortPassword'))
+      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.badPassword'))
       ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
@@ -304,7 +302,7 @@ class _$ShortPassword<T>
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ShortPassword<T> &&
+            other is _$BadPassword<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -316,36 +314,36 @@ class _$ShortPassword<T>
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ShortPasswordCopyWith<T, _$ShortPassword<T>> get copyWith =>
-      __$$ShortPasswordCopyWithImpl<T, _$ShortPassword<T>>(this, _$identity);
+  _$$BadPasswordCopyWith<T, _$BadPassword<T>> get copyWith =>
+      __$$BadPasswordCopyWithImpl<T, _$BadPassword<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T failedValue) invalidEmail,
-    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) badPassword,
   }) {
-    return shortPassword(failedValue);
+    return badPassword(failedValue);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T failedValue)? invalidEmail,
-    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function(T failedValue)? badPassword,
   }) {
-    return shortPassword?.call(failedValue);
+    return badPassword?.call(failedValue);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T failedValue)? invalidEmail,
-    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? badPassword,
     required TResult orElse(),
   }) {
-    if (shortPassword != null) {
-      return shortPassword(failedValue);
+    if (badPassword != null) {
+      return badPassword(failedValue);
     }
     return orElse();
   }
@@ -354,42 +352,41 @@ class _$ShortPassword<T>
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<T> value) invalidEmail,
-    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(BadPassword<T> value) badPassword,
   }) {
-    return shortPassword(this);
+    return badPassword(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
-    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(BadPassword<T> value)? badPassword,
   }) {
-    return shortPassword?.call(this);
+    return badPassword?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
-    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(BadPassword<T> value)? badPassword,
     required TResult orElse(),
   }) {
-    if (shortPassword != null) {
-      return shortPassword(this);
+    if (badPassword != null) {
+      return badPassword(this);
     }
     return orElse();
   }
 }
 
-abstract class ShortPassword<T> implements ValueFailure<T> {
-  const factory ShortPassword({required final T failedValue}) =
-      _$ShortPassword<T>;
+abstract class BadPassword<T> implements ValueFailure<T> {
+  const factory BadPassword({required final T failedValue}) = _$BadPassword<T>;
 
   @override
   T get failedValue;
   @override
   @JsonKey(ignore: true)
-  _$$ShortPasswordCopyWith<T, _$ShortPassword<T>> get copyWith =>
+  _$$BadPasswordCopyWith<T, _$BadPassword<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
