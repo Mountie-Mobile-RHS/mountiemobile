@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:mountiemobile/presentation/screens/home_screen.dart';
+import 'package:mountiemobile/features/events/presentation/pages/home_page.dart';
 
 part 'app_router.gr.dart';
 

@@ -7,8 +7,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    // Testing pull request
-    throw UnimplementedError();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("TEST"),
+      ),
+    );
   }
 }
