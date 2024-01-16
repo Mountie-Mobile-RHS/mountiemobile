@@ -18,14 +18,14 @@ abstract class _$AppRouter extends RootStackRouter {
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const HomeScreen(),
+        child: const HomePage(),
       );
     }
   };
 }
 
 /// generated route for
-/// [HomeScreen]
+/// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
       : super(
